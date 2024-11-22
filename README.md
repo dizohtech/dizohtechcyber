@@ -88,7 +88,7 @@ We welcome contributions! If you'd like to improve the DizohTech Cyber Website:
 ## Support  
 If you encounter any issues or have inquiries, contact us via:  
 - WhatsApp: 0724948294  
-- Email: [dizohtechcyver@gmail.com](mailto:support@dizohtech.com)  
+- Email: [dizohtechcyber@gmail.com](mailto:support@dizohtech.com)  
 
 
   
