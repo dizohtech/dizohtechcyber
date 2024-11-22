@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Dizotech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            gold: '#D4AF37',
+                            cream: '#F5E6D3',
+                            charcoal: '#36454F',
+                            maroon: '#800000',
+                            navy: '#000080',
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body class="bg-luxury-cream text-luxury-charcoal">
+
+    <!-- Sidebar -->
+    <aside class="fixed top-0 left-0 h-full w-64 bg-luxury-navy text-luxury-cream z-50 transform -translate-x-full transition-transform duration-300 ease-in-out" id="sidebar">
+        <div class="p-5">
+            <h2 class="text-2xl font-bold mb-5">Dizotech</h2>
+            <nav>
+                <ul class="space-y-2">
+                    <li><a href="#about" class="block py-2 hover:text-luxury-gold transition duration-300">About</a></li>
+                    <li><a href="#our-story" class="block py-2 hover:text-luxury-gold transition duration-300">Our Story</a></li>
+                    <li><a href="#our-values" class="block py-2 hover:text-luxury-gold transition duration-300">Our Values</a></li>
+                    <li><a href="#our-expertise" class="block py-2 hover:text-luxury-gold transition duration-300">Our Expertise</a></li>
+                    <li><a href="#what-we-offer" class="block py-2 hover:text-luxury-gold transition duration-300">What We Offer</a></li>
+                    <li><a href="#our-impact" class="block py-2 hover:text-luxury-gold transition duration-300">Our Impact</a></li>
+                    <li><a href="#our-approach" class="block py-2 hover:text-luxury-gold transition duration-300">Our Approach</a></li>
+                    <li><a href="#contact" class="block py-2 hover:text-luxury-gold transition duration-300">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="ml-0 transition-margin duration-300 ease-in-out" id="main-content">
+        <!-- Toggle Button -->
+        <button id="sidebar-toggle" class="fixed top-4 left-4 z-50 bg-luxury-navy text-luxury-cream p-2 rounded-full">
+            <i class="fas fa-bars"></i>
+        </button>
+
+ <!-- About Us Section -->
+<section id="about" class="py-20 parallax text-luxury-cream" style="background-image: url('desktop.jpeg'); background-size: cover; background-position: center;">
+    <div class="container mx-auto flex items-center justify-center p-8">
+        <div class="w-1/2 p-4">
+            <img src="hassan-abdi-removebg-preview.png" alt="About Us Image" class="w-full h-auto rounded-lg">
+        </div>
+        <div class="w-1/2 text-center glassmorphism p-8">
+            <h2 class="text-5xl font-bold mb-4">About Us</h2>
+            <p class="text-lg mb-4 leading-relaxed">
+                At Dizotech, we are dedicated to driving innovation and delivering exceptional digital solutions to our clients.
+                With over a decade of experience, our mission is to empower businesses with technology that fosters growth, efficiency,
+                and long-term success.
+            </p>
+            <p class="text-lg leading-relaxed">
+                We partner with companies of all sizes, understanding their unique challenges and designing custom solutions that
+                align with their objectives. Whether you're looking to elevate your digital presence, optimize your operations, or
+                protect your assets, Dizotech is here to help.
+            </p>
+            <button class="mt-6 bg-luxury-gold text-luxury-navy px-6 py-2 rounded-full font-semibold hover:bg-luxury-cream hover:text-luxury-navy transition duration-300" onclick="showPopup('about-popup')">Learn More</button>
+        </div>
+    </div>
+</section>
+        <!-- Our Story Section -->
+        <section id="our-story" class="py-20 bg-luxury-cream text-luxury-charcoal">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Our Story</h2>
+                <p class="max-w-2xl mx-auto text-lg leading-relaxed">
+                    Founded in 2010, Dizotech began as a small team of passionate developers with a vision to make technology more
+                    accessible and impactful for businesses. Over the years, we have grown into a trusted name in the industry, working
+                    with clients across various sectors and completing over 500 successful projects.
+                </p>
+                <button class="mt-6 bg-luxury-navy text-luxury-cream px-6 py-2 rounded-full font-semibold hover:bg-luxury-gold hover:text-luxury-navy transition duration-300" onclick="showPopup('story-popup')">Our Journey</button>
+            </div>
+        </section>
+
+<!-- Our Values Section -->
+<section id="our-values" class="py-20 text-luxury-cream" style="background-image: url('logo stiker.png'); background-attachment: fixed; background-size: cover; background-position: center;">
+    <div class="bg-black bg-opacity-50 py-20"> <!-- Optional overlay for better text visibility -->
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Our Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div class="glassmorphism p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Innovation</h3>
+                    <p class="leading-relaxed">We believe in the power of technology to transform businesses and open doors to new possibilities...</p>
+                </div>
+                <div class="glassmorphism p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Collaboration</h3>
+                    <p class="leading-relaxed">Every project is a partnership, working closely with our clients to create impactful solutions...</p>
+                </div>
+                <div class="glassmorphism p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Integrity</h3>
+                    <p class="leading-relaxed">Trust is the foundation of every successful relationship. We are transparent, accountable...</p>
+                </div>
+                <div class="glassmorphism p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Excellence</h3>
+                    <p class="leading-relaxed">Quality is at the heart of everything we do, from consultation to final delivery...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Our Expertise Section -->
+        <section id="our-expertise" class="py-20 bg-luxury-cream text-luxury-charcoal">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Our Expertise</h2>
+                <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+                    Our skilled team comprises developers, designers, strategists, and security experts. With extensive knowledge in web and
+                    app development, cybersecurity, IT consulting, and digital branding, we provide a comprehensive suite of services.
+                </p>
+                <button class="mt-6 bg-luxury-navy text-luxury-cream px-6 py-2 rounded-full font-semibold hover:bg-luxury-gold hover:text-luxury-navy transition duration-300" onclick="showPopup('expertise-popup')">Explore Our Skills</button>
+            </div>
+        </section>
+
+<!-- What We Offer Section -->
+<section id="what-we-offer" class="py-20 bg-luxury-maroon text-luxury-cream">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="p-4">
+            <img src="logo stiker.png" alt="What We Offer" class="rounded-lg shadow-lg w-full max-w-xs"> <!-- Image with border radius and shadow -->
+        </div>
+        <div class="text-center">
+            <h2 class="text-4xl font-bold mb-6">What We Offer</h2>
+            <ul class="list-disc list-inside max-w-3xl mx-auto text-left space-y-4 text-lg">
+                <li><strong>Web and App Development:</strong> Modern, responsive websites and applications...</li>
+                <li><strong>Cybersecurity and IT Consulting:</strong> Protect your digital assets and streamline your IT infrastructure...</li>
+                <li><strong>Content Creation and Design:</strong> Engaging content and creative visuals...</li>
+                <li><strong>Branding and Logo Design:</strong> Memorable logos and cohesive branding...</li>
+                <li><strong>Consulting Services:</strong> Guidance on KRA return filing, business registration...</li>
+                <li><strong>NTSA Services:</strong> Assistance with essential services such as driving license renewal...</li>
+                <li><strong>Bulk Printing and CV Drafting:</strong> Professional document services for personal and professional needs.</li>
+            </ul>
+            <button class="mt-6 bg-luxury-cream text-luxury-maroon px-6 py-2 rounded-full font-semibold hover:bg-luxury-gold hover:text-luxury-navy transition duration-300" onclick="showPopup('services-popup')">Detailed Services</button>
+        </div>
+    </div>
+</section>
+
+        <!-- Our Impact Section -->
+        <section id="our-impact" class="py-20 bg-luxury-cream text-luxury-charcoal">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Our Impact</h2>
+                <ul class="list-disc list-inside max-w-2xl mx-auto space-y-2 text-lg">
+                    <li>10+ Years in Business</li>
+                    <li>500+ Projects Completed</li>
+                    <li>98% Client Satisfaction Rate</li>
+                </ul>
+                <button class="mt-6 bg-luxury-navy text-luxury-cream px-6 py-2 rounded-full font-semibold hover:bg-luxury-gold hover:text-luxury-navy transition duration-300" onclick="showPopup('impact-popup')">Success Stories</button>
+            </div>
+        </section>
+
+        <!-- Our Approach Section -->
+        <section id="our-approach" class="py-20 bg-luxury-navy text-luxury-cream">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Our Approach</h2>
+                <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+                    Our approach combines technical expertise with a client-centered focus. From the first consultation,
+                    we tailor our strategies to fit each client's unique needs and goals, ensuring solutions that drive meaningful results.
+                </p>
+                <button class="mt-6 bg-luxury-cream text-luxury-navy px-6 py-2 rounded-full font-semibold hover:bg-luxury-gold hover:text-luxury-navy transition duration-300" onclick="showPopup('approach-popup')">Learn Our Process</button>
+            </div>
+        </section>
+
+  <!-- Contact Us Section -->
+<section id="contact" class="py-20 bg-luxury-charcoal text-luxury-cream">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="text-center">
+            <h2 class="text-4xl font-bold mb-6">Contact Us</h2>
+            <p class="text-lg mb-6">Ready to take your business to the next level? Get in touch today to discuss your project and how Dizotech can support your digital transformation.</p>
+            <form class="mt-8 max-w-lg mx-auto">
+                <input type="text" placeholder="Your Name" class="w-full mb-4 p-2 rounded text-luxury-charcoal">
+                <input type="email" placeholder="Your Email" class="w-full mb-4 p-2 rounded text-luxury-charcoal">
+                <textarea placeholder="Your Message" class="w-full mb-4 p-2 rounded text-luxury-charcoal" rows="4"></textarea>
+                <button type="submit" class="bg-luxury-gold text-luxury-navy px-6 py-2 rounded-full font-semibold hover:bg-luxury-cream transition duration-300">Send Message</button>
+            </form>
+        </div>
+        <div class="bg-luxury-charcoal flex items-center justify-center"> <!-- Column with image -->
+            <img src="CONTACT.jpg" alt="Contact Us Image" class="rounded-lg shadow-lg w-full max-w-xs"> <!-- Image with border radius -->
+        </div>
+    </div>
+</section>
+
+        <!-- Footer -->
+        <footer class="bg-luxury-navy text-luxury-cream py-8">
+            <div class="container mx-auto text-center">
+                <p>&copy; 2024 Dizotech. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Popups -->
+    <div class="popup-overlay" id="popup-overlay"></div>
+
+    <div id="about-popup" class="popup glassmorphism p-8 max-w-2xl bg-luxury-cream text-luxury-charcoal">
+        <h3 class="text-2xl font-bold mb-4">About Dizotech</h3>
+        <p class="mb-4">Dizotech is a leading technology solutions provider, dedicated to empowering businesses through innovative digital strategies. Our team of experts combines creativity with technical prowess to deliver tailored solutions that drive growth and efficiency.</p>
+        <button class="bg-luxury-navy text-luxury-cream px-4 py-2 rounded hover:bg-luxury-gold hover:text-luxury-navy transition duration-300" onclick="hidePopup('about-popup')">Close</button>
+    </div>
+
+    <div id="story-popup" class="popup glassmorphism p-8 max-w-2xl bg-luxury-cream text-luxury-charcoal">
+        <h3 class="text-2xl font-bold mb-4">Our Journey</h3>
+        <p class="mb-4">From our humble beginnings in 2010, Dizotech has grown into a trusted name in the tech industry. We've overcome challenges, celebrated victories, and continuously evolved to meet the changing needs of our clients. Our journey is marked by innovation, perseverance, and a commitment to excellence.</p>
+        <button class="bg-luxury-navy text-luxury-cream px-4 py-2 rounded hover:bg-luxury-gold hover:text-luxury-navy transition duration-300" onclick="hidePopup('story-popup')">Close</button>
+    </div>
+
+    <div id="expertise-popup" class="popup glassmorphism p-8 max-w-2xl bg-luxury-cream text-luxury-charcoal">
+        <h3 class="text-2xl font-bold mb-4">Our Areas of Expertise</h3>
+        <ul class="list-disc list-inside mb-4">
+            <li>Full-stack Web Development</li>
+            <li>Mobile App Development</li>
+            <li>Cloud Computing and DevOps</li>
+            <li>Cybersecurity Solutions</li>
+            <li>AI and Machine Learning Integration</li>
+            <li>UI/UX Design</li>
+        </ul>
+        <button class="bg-luxury-navy text-luxury-cream px-4 py-2 rounded hover:bg-luxury-gold hover:text-luxury-navy transition duration-300" onclick="hidePopup('expertise-popup')">Close</button>
+    </div>
+
+    <div id="services-popup" class="popup glassmorphism p-8 max-w-2xl bg-luxury-cream text-luxury-charcoal">
+        <h3 class="text-2xl font-bold mb-4">Our Comprehensive Services</h3>
+        <p class="mb-2">At Dizotech, we offer a wide range of services to meet all your digital needs:</p>
+        <ul class="list-disc list-inside mb-4">
+            <li>Custom Software Development</li>
+            <li>E-commerce Solutions</li>
+            <li>Digital Marketing and SEO</li>
+            <li>IT Infrastructure Management</li>
+            <li>Data Analytics and Business Intelligence</li>
+            <li>Blockchain Development</li>
+        </ul>
+        <button class="bg-luxury-navy text-luxury-cream px-4 py-2 rounded hover:bg-luxury-gold hover:text-luxury-navy transition duration-300" onclick="hidePopup('services-popup')">Close</button>
+    </div>
+
+    <div id="impact-popup" class="popup glassmorphism p-8 max-w-2xl bg-luxury-cream text-luxury-charcoal">
+        <h3 class="text-2xl font-bold mb-4">Our Success Stories</h3>
+        <p class="mb-2">Over the years, we've had the privilege of working with amazing clients and achieving remarkable results:</p>
+        <ul class="list-disc list-inside mb-4">
+            <li>Increased online sales by 200% for an e-commerce client</li>
+            <li>Reduced IT costs by 40% for a manufacturing company</li>
+            <li>Developed an award-winning mobile app with over 1 million downloads</li>
+            <li>Implemented a cybersecurity solution that prevented a major data breach</li>
+        </ul>
+        <button class="bg-luxury-navy text-luxury-cream px-4 py-2 rounded hover:bg-luxury-gold hover:text-luxury-navy transition duration-300" onclick="hidePopup('impact-popup')">Close</button>
+    </div>
+
+    <div id="approach-popup" class="popup glassmorphism p-8 max-w-2xl bg-luxury-cream text-luxury-charcoal">
+        <h3 class="text-2xl font-bold mb-4">Our Approach to Success</h3>
+        <ol class="list-decimal list-inside mb-4">
+            <li>Understand: We start by deeply understanding your business needs and goals.</li>
+            <li>Plan: We create a comprehensive strategy tailored to your specific requirements.</li>
+            <li>Design: Our team designs innovative solutions that align with your brand and objectives.</li>
+            <li>Develop: We use cutting-edge technologies to bring your vision to life.</li>
+            <li>Test: Rigorous testing ensures the highest quality and performance.</li>
+            <li>Deploy: We carefully implement the solution, ensuring a smooth transition.</li>
+            <li>Support: Our team provides ongoing support and maintenance to ensure long-term success.</li>
+        </ol>
+        <button class="bg-luxury-navy text-luxury-cream px-4 py-2 rounded hover:bg-luxury-gold hover:text-luxury-navy transition duration-300" onclick="hidePopup('approach-popup')">Close</button>
+    </div>
+
+    <script>
+        // Sidebar toggle
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('main-content');
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+            mainContent.classList.toggle('ml-64');
+        });
+
+        // Popup functionality
+        function showPopup(popupId) {
+            document.getElementById(popupId).style.display = 'block';
+            document.getElementById('popup-overlay').style.display = 'block';
+        }
+
+        function hidePopup(popupId) {
+            document.getElementById(popupId).style.display = 'none';
+            document.getElementById('popup-overlay').style.display = 'none';
+        }
+
+        // Close popup when clicking outside
+        document.getElementById('popup-overlay').addEventListener('click', () => {
+            document.querySelectorAll('.popup').forEach(popup => {
+                popup.style.display = 'none';
+            });
+            document.getElementById('popup-overlay').style.display = 'none';
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close sidebar on mobile
+                if (window.innerWidth < 768) {
+                    sidebar.classList.add('-translate-x-full');
+                    mainContent.classList.remove('ml-64');
+                }
+            });
+        });
+
+        // Parallax effect
+        window.addEventListener('scroll', () => {
+            const parallaxElements = document.querySelectorAll('.parallax');
+            parallaxElements.forEach(element => {
+                const scrollPosition = window.pageYOffset;
+                element.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+            });
+        });
+
+        // Fade-in effect for sections
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('opacity-0', 'transition', 'duration-1000');
+            observer.observe(section);
+        });
+    </script>
+    
+    
+</body>
+</html>

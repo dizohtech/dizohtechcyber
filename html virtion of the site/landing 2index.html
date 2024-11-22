@@ -1,0 +1,770 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Dizotech Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        /* Optional: Custom styles for mobile menu */
+        .menu-hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="font-roboto bg-gray-100 text-gray-900">
+
+<!-- Navigation Bar -->
+<nav class="bg-white bg-opacity-30 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-10">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-blue-600">
+            Dizotech
+        </div>
+        <div class="flex-grow flex justify-center">
+            <div class="hidden md:flex space-x-8">
+                <a href="services.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Services</a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-600 transition duration-300">About Us</a> <!-- Updated link -->
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 transition duration-300">Contact</a>
+            </div>
+        </div>
+        <!-- Button at the end of the navbar -->
+        <div class="hidden md:block">
+            <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg transition duration-300 hover:bg-blue-500">Book a Consultation</a>
+        </div>
+        <!-- Hamburger Icon for Mobile -->
+        <div class="md:hidden flex items-center">
+            <button id="mobile-menu-toggle" class="text-gray-700 focus:outline-none">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white bg-opacity-30 backdrop-blur-md shadow-md">
+        <div class="flex flex-col px-4 py-2 space-y-2">
+            <a href="#services" class="text-gray-700 hover:text-blue-600 transition duration-300">Services</a>
+            <a href="about.html" class="text-gray-700 hover:text-blue-600 transition duration-300">About Us</a> <!-- Updated link -->
+            <a href="#contact" class="text-gray-700 hover:text-blue-600 transition duration-300">Contact</a>
+            <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg transition duration-300 hover:bg-blue-500">Book a Consultation</a>
+        </div>
+    </div>
+</nav>
+<style>
+    /* Additional styles for glassmorphism effect */
+    nav {
+        backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+    }
+
+    /* Hover effect for nav links */
+    a {
+        position: relative;
+    }
+
+    a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        height: 2px;
+        width: 100%;
+        background: transparent;
+        transition: background 0.3s;
+    }
+
+    a:hover::after {
+        background: blue; /* Change to desired hover color */
+    }
+</style>
+
+<!-- Hero Section -->
+<section class="relative bg-gray-800 text-white py-20 mt-16" style="background-image: url('desktop.jpeg'); background-size: cover; background-position: center;">
+    <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Overlay -->
+    <div class="container mx-auto flex justify-between items-center relative z-10">
+        <!-- Text Content -->
+        <div class="w-1/2">
+            <h1 class="text-6xl font-bold mb-4">
+                Dizotech
+            </h1>
+            <h2 class="text-4xl font-semibold mb-4">
+                We Make Technology Work for You
+            </h2>
+            <p class="text-lg mb-8">
+                Empowering your digital presence with innovative solutions
+            </p>
+            <div class="flex justify-start">
+                <a class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold mr-4 transition duration-300 hover:bg-blue-600 hover:text-white" href="#services">
+                    Explore Services
+                </a>
+                <a class="bg-blue-800 text-white px-8 py-4 rounded-full font-semibold transition duration-300 hover:bg-blue-600" href="#contact">
+                    Book a Consultation
+                </a>
+            </div>
+        </div>
+        <!-- Logo Section -->
+        <div class="w-1/2 flex justify-center">
+            <img src="logo stiker.png" alt="Dizotech Logo" class="h-48 mb-4 animate-float" /> <!-- Floating Effect -->
+        </div>
+    </div>
+    <!-- Features Section with Glassmorphism Effect -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 container mx-auto">
+        <div class="bg-white bg-opacity-30 backdrop-blur-lg p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500">
+            <h3 class="text-2xl font-bold mb-2">Innovative Solutions</h3>
+            <p class="text-lg">
+                Our team specializes in creating innovative solutions tailored to your business needs, ensuring your technology works for you.
+            </p>
+        </div>
+        <div class="bg-white bg-opacity-30 backdrop-blur-lg p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500">
+            <h3 class="text-2xl font-bold mb-2">Expert Consultation</h3>
+            <p class="text-lg">
+                Get expert advice from our professionals who are dedicated to helping you navigate the digital landscape.
+            </p>
+        </div>
+        <div class="bg-white bg-opacity-30 backdrop-blur-lg p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500">
+            <h3 class="text-2xl font-bold mb-2">Comprehensive Support</h3>
+            <p class="text-lg">
+                We provide ongoing support and maintenance to ensure your systems run smoothly and efficiently.
+            </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Floating effect for the logo */
+    @keyframes float {
+        0% {
+            transform: translatey(0px);
+        }
+        50% {
+            transform: translatey(-10px);
+        }
+        100% {
+            transform: translatey(0px);
+        }
+    }
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
+    }
+
+    /* Glowing hover effect */
+    .hover\:shadow-blue-500:hover {
+        box-shadow: 0 0 10px rgba(37, 99, 235, 1), 0 0 20px rgba(37, 99, 235, 0.5);
+    }
+</style>
+
+
+<!-- About Us Section -->
+<section class="py-20 bg-gradient-to-r from-purple-500 to-blue-500 text-white" id="about" onmousemove="changeBackground(event)">
+    <div class="container mx-auto flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+            <img alt="Team of professionals working together in an office environment" class="rounded-lg shadow-lg floating-image" height="400" src="hassan-abdi.jpg" width="600"/>
+        </div>
+        <div class="md:w-1/2 md:pl-12">
+            <h2 class="text-5xl font-bold mb-4">About Us</h2>
+            <p class="text-lg mb-4">
+                At Dizotech, we are committed to driving innovation and excellence in technology solutions. With over a decade of experience, our mission is to empower businesses with cutting-edge digital solutions that foster growth and success.
+            </p>
+            <p class="text-lg mb-4">
+                Our team of experts works collaboratively to understand your unique challenges and deliver tailored solutions that meet your specific needs. We believe in building lasting partnerships with our clients, ensuring their success is our priority.
+            </p>
+            
+            <!-- Statistics Section -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                <div class="bg-white bg-opacity-30 backdrop-blur-lg p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                    <h3 class="text-4xl font-bold text-blue-600">10+</h3>
+                    <p class="text-lg">Years in Business</p>
+                </div>
+                <div class="bg-white bg-opacity-30 backdrop-blur-lg p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                    <h3 class="text-4xl font-bold text-blue-600">500+</h3>
+                    <p class="text-lg">Projects Completed</p>
+                </div>
+                <div class="bg-white bg-opacity-30 backdrop-blur-lg p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                    <h3 class="text-4xl font-bold text-blue-600">98%</h3>
+                    <p class="text-lg">Client Satisfaction Rate</p>
+                </div>
+            </div>
+
+            <div class="mt-6">
+                <a href="#contact" class="bg-white text-blue-600 px-4 py-2 rounded-lg transition duration-300 hover:bg-blue-600 hover:text-white">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Floating effect for the image */
+    .floating-image {
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translatey(0px);
+        }
+        50% {
+            transform: translatey(-10px);
+        }
+        100% {
+            transform: translatey(0px);
+        }
+    }
+
+    /* JavaScript for background color change */
+    section {
+        transition: background-color 0.5s ease;
+    }
+</style>
+
+<script>
+    function changeBackground(event) {
+        const x = event.clientX / window.innerWidth * 255;
+        const y = event.clientY / window.innerHeight * 255;
+        const color = `rgb(${x}, ${y}, 150)`;
+        document.getElementById('about').style.backgroundColor = color;
+    }
+</script>
+
+<!-- Services Overview Section -->
+<section class="py-20 bg-gradient-to-r from-green-400 to-blue-500" id="services">
+    <div class="container mx-auto text-center">
+        <h2 class="text-5xl font-bold text-white mb-12">
+            Our Services
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <i class="fas fa-shield-alt text-5xl text-green-600 mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2 text-gray-800">
+                    Cybersecurity and IT Consulting
+                </h3>
+                <p class="mb-4 text-gray-600">
+                    Protect your business with our top-notch cybersecurity and IT consulting services.
+                </p>
+                <a class="text-green-600 font-semibold hover:underline" href="#">Learn More</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <i class="fas fa-pencil-alt text-5xl text-green-600 mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2 text-gray-800">
+                    Content Creation and Design Services
+                </h3>
+                <p class="mb-4 text-gray-600">
+                    Engage your audience with our creative content and design solutions.
+                </p>
+                <a class="text-green-600 font-semibold hover:underline" href="#">Learn More</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <i class="fas fa-code text-5xl text-green-600 mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2 text-gray-800">
+                    Web and App Development
+                </h3>
+                <p class="mb-4 text-gray-600">
+                    Build robust and scalable web and mobile applications with our expert development team.
+                </p>
+                <a class="text-green-600 font-semibold hover:underline" href="#">Learn More</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <i class="fas fa-paint-brush text-5xl text-green-600 mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2 text-gray-800">
+                    Logo and Branding Design
+                </h3>
+                <p class="mb-4 text-gray-600">
+                    Create a strong brand identity with our professional logo and branding design services.
+                </p>
+                <a class="text-green-600 font-semibold hover:underline" href="#">Learn More</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <i class="fas fa-file-alt text-5xl text-green-600 mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2 text-gray-800">
+                    KRA Return Filing and Consultation
+                </h3>
+                <p class="mb-4 text-gray-600">
+                    Ensure compliance and accuracy with our KRA return filing and consultation services.
+                </p>
+                <a class="text-green-600 font-semibold hover:underline" href="#">Learn More</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <i class="fas fa-print text-5xl text-green-600 mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2 text-gray-800">
+                    Bulk Printing, CV Drafting, etc.
+                </h3>
+                <p class="mb-4 text-gray-600">
+                    Get high-quality bulk printing and professional CV drafting services.
+                </p>
+                <a class="text-green-600 font-semibold hover:underline" href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Projects/Case Studies Section -->
+<section class="py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white" id="projects">
+    <div class="container mx-auto text-center">
+        <h2 class="text-5xl font-bold mb-12">
+            Featured Projects
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <img alt="Screenshot of a completed web development project" class="mb-4 rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/FNwRaa059YofAKl9CsGE1Lw1Hy0nfqwpYe9UsIL4emAHIUHPB.jpg" width="600"/>
+                <h3 class="text-2xl font-bold mb-2 text-gray-800">
+                    Project One
+                </h3>
+                <p class="mb-4 text-gray-600">
+                    A comprehensive web development project for a leading e-commerce platform.
+                </p>
+                <a class="text-blue-600 font-semibold hover:underline" href="#">
+                    Read More
+                </a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <img alt="Screenshot of a mobile app developed for a client" class="mb-4 rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/83XIETs77eyVVK02WT29wOdDxpC44tbFea0SiYnyByq9B1xTA.jpg" width="600"/>
+                <h3 class="text-2xl font-bold mb-2 text-gray-800">
+                    Project Two
+                </h3>
+                <p class="mb-4 text-gray-600">
+                    A mobile app development project for a healthcare provider.
+                </p>
+                <a class="text-blue-600 font-semibold hover:underline" href="#">
+                    Read More
+                </a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <img alt="Screenshot of a cybersecurity solution implemented for a client" class="mb-4 rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/LhY9f9dQtb34Ny9ZJ05eP6J5J1DbmNcqiWFrkieVpVGuDqjnA.jpg" width="600"/>
+                <h3 class="text-2xl font-bold mb-2 text-gray-800">
+                    Project Three
+                </h3>
+                <p class="mb-4 text-gray-600">
+                    A cybersecurity solution implemented for a financial services company.
+                </p>
+                <a class="text-blue-600 font-semibold hover:underline" href="#">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education Hub Section -->
+<section class="bg-gradient-to-r from-gray-200 to-gray-300 py-20" id="education">
+    <div class="container mx-auto text-center">
+        <h2 class="text-5xl font-bold mb-12">
+            Education Hub
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <i class="fas fa-file-alt text-5xl text-blue-600 mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2 text-gray-800">
+                    KRA Filing Guide
+                </h3>
+                <p class="mb-4 text-gray-600">
+                    Learn the ins and outs of KRA filing with our comprehensive guide.
+                </p>
+                <a class="text-blue-600 font-semibold hover:underline" href="#">
+                    Read More
+                </a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <i class="fas fa-shield-alt text-5xl text-blue-600 mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2 text-gray-800">
+                    Cybersecurity Awareness
+                </h3>
+                <p class="mb-4 text-gray-600">
+                    Stay safe online with our essential cybersecurity tips and resources.
+                </p>
+                <a class="text-blue-600 font-semibold hover:underline" href="#">
+                    Read More
+                </a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <i class="fas fa-chart-line text-5xl text-blue-600 mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2 text-gray-800">
+                    Web Optimization Tips
+                </h3>
+                <p class="mb-4 text-gray-600">
+                    Optimize your website for better performance and user experience.
+                </p>
+                <a class="text-blue-600 font-semibold hover:underline" href="#">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Booking Form Section -->
+<section class="py-20" id="booking" onmousemove="updateBackground(event)">
+    <div class="container mx-auto text-center">
+        <h2 class="text-5xl font-bold text-white mb-12">
+            Book a Service
+        </h2>
+        <form class="max-w-lg mx-auto bg-white bg-opacity-30 backdrop-blur-lg p-8 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            <div class="mb-4">
+                <label class="block text-left text-gray-800 font-semibold mb-2" for="name">
+                    Name
+                </label>
+                <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" id="name" type="text" required/>
+            </div>
+            <div class="mb-4">
+                <label class="block text-left text-gray-800 font-semibold mb-2" for="email">
+                    Email
+                </label>
+                <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" id="email" type="email" required/>
+            </div>
+            <div class="mb-4">
+                <label class="block text-left text-gray-800 font-semibold mb-2" for="service">
+                    Service
+                </label>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" id="service" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option>Cybersecurity and IT Consulting</option>
+                    <option>Content Creation and Design Services</option>
+                    <option>Web and App Development</option>
+                    <option>Logo and Branding Design</option>
+                    <option>KRA Return Filing and Consultation</option>
+                    <option>Bulk Printing, CV Drafting, etc.</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label class="block text-left text-gray-800 font-semibold mb-2" for="message">
+                    Message
+                </label>
+                <textarea class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" id="message" required></textarea>
+            </div>
+            <button class="bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition duration-300 hover:bg-green-700 focus:outline-none" type="submit">
+                Submit
+            </button>
+        </form>
+    </div>
+</section>
+
+<style>
+    /* Glassmorphism effect for the form */
+    form {
+        background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+        backdrop-filter: blur(10px); /* Blur effect */
+        border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+    }
+
+    /* Additional styles for form elements */
+    input, select, textarea {
+        background: rgba(255, 255, 255, 0.7); /* Semi-transparent background for inputs */
+        border: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
+    }
+
+    input:focus, select:focus, textarea:focus {
+        border-color: rgba(0, 120, 255, 0.7); /* Focus border color */
+    }
+</style>
+
+<script>
+    function updateBackground(event) {
+        const x = event.clientX; // Get the X coordinate of the mouse
+        const y = event.clientY; // Get the Y coordinate of the mouse
+        const width = window.innerWidth; // Get the width of the window
+        const height = window.innerHeight; // Get the height of the window
+
+        // Calculate the percentage of mouse position
+        const xPercent = (x / width) * 100;
+        const yPercent = (y / height) * 100;
+
+        // Set the background style with radial gradient
+        document.getElementById('booking').style.background = `radial-gradient(circle at ${xPercent}% ${yPercent}%, rgba(0, 255, 255, 0.6), rgba(0, 0, 255, 0.6))`;
+    }
+</script>
+
+<!-- Client Testimonials Section -->
+<section class="bg-gradient-to-r from-gray-200 to-gray-300 py-20" id="testimonials">
+    <div class="container mx-auto text-center">
+        <h2 class="text-5xl font-bold mb-12">
+            Client Testimonials
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <img alt="Portrait of a satisfied client" class="w-24 h-24 rounded-full mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/J1xb88A6w7aTF9ZmMqvbFybVDeL3LHJ4iKfYyheeZfg0PoOeE.jpg" width="100"/>
+                <p class="mb-4 text-gray-600">
+                    "Dizotech transformed our digital presence. Their team is professional and highly skilled."
+                </p>
+                <p class="font-semibold text-gray-800">
+                    - John Doe, CEO of TechCorp
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <img alt="Portrait of a happy client" class="w-24 h-24 rounded-full mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/f9BB1DXj6PwxPSUSZtqSXPrfQ0RHrICuRrlCjFh8UqCfDqjnA.jpg" width="100"/>
+                <p class="mb-4 text-gray-600">
+                    "Their cybersecurity solutions are top-notch. We feel much safer now."
+                </p>
+                <p class="font-semibold text-gray-800">
+                    - Jane Smith, CTO of SecureNet
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <img alt="Portrait of a pleased client" class="w-24 h-24 rounded-full mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/nNTgKhI7ozIbLRePqSGxQnR4gAQpbWiMNnRGC6GBOVR8g64JA.jpg" width="100"/>
+                <p class="mb-4 text-gray-600">
+                    "Excellent service and support. Highly recommend Dizotech for web development."
+                </p>
+                <p class="font-semibold text-gray-800">
+                    - Mike Johnson, Founder of WebWorks
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Articles/Blog Section -->
+<section class="py-20 bg-gradient-to-r from-gray-200 to-gray-300" id="blog">
+    <div class="container mx-auto text-center">
+        <h2 class="text-5xl font-bold mb-12">
+            Latest Articles
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <img alt="Cover image for an article about cybersecurity trends" class="mb-4 rounded" height="400" src="https://storage.googleapis.com/a1aa/image/VyAylJNBug5lA5hEDrTYedeUyEv1OeWm9nLegoVzVkabHUHPB.jpg" width="600"/>
+                <h3 class="text-2xl font-bold mb-2 text-gray-800">
+                    Cybersecurity Trends in 2023
+                </h3>
+                <p class="mb-4 text-gray-600">
+                    Stay ahead of the curve with the latest trends in cybersecurity.
+                </p>
+                <a class="text-blue-600 font-semibold hover:underline" href="#">
+                    Read More
+                </a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <img alt="Cover image for an article about web development best practices" class="mb-4 rounded" height="400" src="https://storage.googleapis.com/a1aa/image/MiPgvMi4B5IqGhBOUKA0IisGFs0m4Des1yZTpbmi5PA9g64JA.jpg" width="600"/>
+                <h3 class="text-2xl font-bold mb-2 text-gray-800">
+                    Web Development Best Practices
+                </h3>
+                <p class="mb-4 text-gray-600">
+                    Learn the best practices for building robust and scalable web applications.
+                </p>
+                <a class="text-blue-600 font-semibold hover:underline" href="#">
+                    Read More
+                </a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <img alt="Cover image for an article about content marketing strategies" class="mb-4 rounded" height="400" src="https://storage.googleapis.com/a1aa/image/ZcnKcduRe7yFUiWGQKNzuiwmfw7xfvAuThal9ehzj0ZUHUHPB.jpg" width="600"/>
+                <h3 class="text-2xl font-bold mb-2 text-gray-800">
+                    Content Marketing Strategies
+                </h3>
+                <p class="mb-4 text-gray-600">
+                    Boost your brand's visibility with effective content marketing strategies.
+                </p>
+                <a class="text-blue-600 font-semibold hover:underline" href="#">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Working Hours Section --> 
+<section class="relative bg-gray-200 py-20" id="working-hours"> 
+    <div class="container mx-auto text-center relative z-10 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+            <img src="Working Hours.png" alt="Working Hours Image" class="w-full h-auto rounded-lg shadow-lg" />
+        </div>
+        <div class="md:w-1/2">
+            <h2 class="text-5xl font-bold mb-12 text-gray-800"> 
+                Working Hours 
+            </h2> 
+            <p class="mb-4 text-gray-600">
+                Our working hours are as follows:
+            </p>
+            <table class="min-w-full bg-white border border-gray-300 shadow-lg rounded-lg overflow-hidden">
+                <tbody>
+                    <tr class="border-b border-gray-300 hover:bg-blue-100 transition duration-300">
+                        <td class="py-4 px-6 text-left font-semibold">Monday</td>
+                        <td class="py-4 px-6 text-left">09 AM - 09 PM</td>
+                    </tr>
+                    <tr class="border-b border-gray-300 hover:bg-blue-100 transition duration-300">
+                        <td class="py-4 px-6 text-left font-semibold">Tuesday</td>
+                        <td class="py-4 px-6 text-left">09 AM - 09 PM</td>
+                    </tr>
+                    <tr class="border-b border-gray-300 hover:bg-blue-100 transition duration-300">
+                        <td class="py-4 px-6 text-left font-semibold">Wednesday</td>
+                        <td class="py-4 px-6 text-left">09 AM - 09 PM</td>
+                    </tr>
+                    <tr class="border-b border-gray-300 hover:bg-blue-100 transition duration-300">
+                        <td class="py-4 px-6 text-left font-semibold">Thursday</td>
+                        <td class="py-4 px-6 text-left">09 AM - 09 PM</td>
+                    </tr>
+                    <tr class="border-b border-gray-300 hover:bg-blue-100 transition duration-300">
+                        <td class="py-4 px-6 text-left font-semibold">Friday</td>
+                        <td class="py-4 px-6 text-left">09 AM - 09 PM</td>
+                    </tr>
+                    <tr class="border-b border-gray-300 hover:bg-blue-100 transition duration-300">
+                        <td class="py-4 px-6 text-left font-semibold">Sat / Sun</td>
+                        <td class="py-4 px-6 text-left">Closed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> 
+</section>
+
+<style>
+    /* Glowing outline effect for the table */
+    table {
+        border-collapse: collapse;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    table:hover {
+        box-shadow: 0 0 20px rgba(0, 120, 255, 0.7);
+    }
+
+    th, td {
+        border: 1px solid transparent; /* Make borders transparent initially */
+    }
+
+    th {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    tr:hover td {
+        border: 1px solid rgba(0, 120, 255, 0.5); /* Add border on hover */
+    }
+
+    /* Additional styles for better presentation */
+    h2 {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    td {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+
+    /* Optional: Add some padding to the section */
+    #working-hours {
+        padding: 40px 0;
+    }
+</style>
+
+<!-- Contact & Location Section -->
+<section class="relative bg-gray-200 py-20" id="contact">
+    <div class="absolute inset-0 bg-cover bg-center blur-lg" style="background-image: url('location.jpg');"></div>
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="container mx-auto text-center relative z-10">
+        <h2 class="text-5xl font-bold mb-12 text-white">
+            Contact Us
+        </h2>
+        <div class="flex flex-col md:flex-row justify-center items-stretch">
+            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12 flex flex-col">
+                <h3 class="text-2xl font-bold mb-4 text-white">
+                    Get in Touch
+                </h3>
+                <div class="mb-4">
+                    <img src="logo stiker.png" alt="Dizotech Logo" class="h-16 mx-auto mb-4" />
+                </div>
+                <form class="bg-white p-6 rounded-lg shadow-lg flex-grow">
+                    <div class="mb-4">
+                        <label class="block text-left text-gray-800 font-semibold mb-2" for="name">Name</label>
+                        <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" id="name" type="text" required/>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-left text-gray-800 font-semibold mb-2" for="email">Email</label>
+                        <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" id="email" type="email" required/>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-left text-gray-800 font-semibold mb-2" for="message">Message</label>
+                        <textarea class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" id="message" required></textarea>
+                    </div>
+                    <button class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold transition duration-300 hover:bg-blue-700 focus:outline-none" type="submit">
+                        Submit
+                    </button>
+                </form>
+            </div>
+            <div class="md:w-1/2 flex flex-col">
+                <h3 class="text-2xl font-bold mb-4 text-white">
+                    Our Location
+                </h3>
+                <p class="mb-4 text-white">
+                    We are located in Naivasha, a beautiful town known for its scenic landscapes and vibrant community. 
+                    You can find us at the following address:
+                </p>
+                <p class="mb-4 text-white">
+                    <strong>Dizotech</strong><br>
+                    Naivasha, Kenya
+                </p>
+                <div class="flex-grow">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.34422807659556!2d36.43302333280311!3d-0.7150136423315356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1829175bad50308f%3A0x3b15787891634c3e!2sDizohtechcyber!5e0!3m2!1sen!2ske!4v1731849187665!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 20px; /* Add padding for smaller screens */
+        }
+        h2 {
+            font-size:  2.5rem; /* Adjust heading size for smaller screens */
+        }
+        .text-2xl {
+            font-size: 1.5rem; /* Adjust subheading size for smaller screens */
+        }
+        .flex {
+            flex-direction: column; /* Stack elements vertically on small screens */
+        }
+    }
+</style>
+
+<!-- Footer Section -->
+<footer class="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-8">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        <!-- Logo Section -->
+        <div class="flex flex-col items-center mb-4 md:mb-0">
+            <img src="logo stiker.png" alt="Dizotech Logo" class="h-16 mb-2" /> <!-- Replace with your logo URL -->
+            <h2 class="text-2xl font-bold">Dizotech</h2>
+        </div>
+        <!-- Navigation Links -->
+        <div class="flex flex-col items-center mb-4 md:mb-0">
+            <div class="mb-2">
+                <a class="text-white hover:text-gray-200 mx-2" href="#about">About Us</a>
+                <a class="text-white hover:text-gray-200 mx-2" href="#services">Services</a>
+                <a class="text-white hover:text-gray-200 mx-2" href="#projects">Projects</a>
+                <a class="text-white hover:text-gray-200 mx-2" href="#contact">Contact</a>
+                <a class="text-white hover:text-gray-200 mx-2" href="#privacy">Privacy Policy</a>
+                <a class="text-white hover:text-gray-200 mx-2" href="#terms">Terms of Service</a>
+            </div>
+        </div>
+        <!-- Social Links -->
+        <div class="flex justify-center mb-4 md:mb-0">
+            <a class="text-white hover:text-gray-200 mx-2" href="#">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="text-white hover:text-gray-200 mx-2" href="#">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a class="text-white hover:text-gray-200 mx-2" href="#">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="text-white hover:text-gray-200 mx-2" href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+    <hr class="border-gray-300 my-4" />
+    <p class="text-center text-sm">&copy; 2023 Dizotech. All rights reserved.</p>
+</footer>
+
+<script>
+    // JavaScript for mobile menu toggle
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+</body>
+</html>

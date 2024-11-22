@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DizohTech Privacy Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .float { animation: float 6s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-purple-100 min-h-screen">
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl font-bold text-gray-800">DizohTech Privacy Policy</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="grid md:grid-cols-3 gap-8">
+            <nav class="md:col-span-1">
+                <div class="bg-white rounded-lg shadow-md p-6 sticky top-24">
+                    <h2 class="text-xl font-semibold mb-4">Table of Contents</h2>
+                    <ul class="space-y-2" id="tableOfContents"></ul>
+                </div>
+            </nav>
+
+            <div class="md:col-span-2 space-y-8">
+                <section class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-2xl font-bold mb-4">Introduction</h2>
+                    <p class="text-gray-600 mb-4">Effective Date: <span id="effectiveDate">November 1, 2023</span></p>
+                    <p class="text-gray-700">
+                        DizohTech ("we," "us," or "our") respects your privacy and is committed to protecting it through our
+                        compliance with this policy. This Privacy Policy explains how we collect, use, disclose, and safeguard your
+                        information when you visit our website or use our services.
+                    </p>
+                    <div class="mt-6 float">
+                        <img src="desktop.jpeg" alt="Privacy illustration" width="200" height="200" class="mx-auto rounded-full shadow-lg">
+                    </div>
+                </section>
+
+                <div id="policyContent"></div>
+
+                <section class="bg-white rounded-lg shadow-md p-6" x-data="{ activeTab: 'general' }">
+                    <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+                    <div class="mb-4 flex flex-wrap">
+                        <button @click="activeTab = 'general'" :class="{ 'bg-blue-500 text-white': activeTab === 'general', 'bg-gray-200 text-gray-700': activeTab !== 'general' }" class="px-4 py-2 rounded-l-lg">General</button>
+                        <button @click="activeTab = 'webdev'" :class="{ 'bg-blue-500 text-white': activeTab === 'webdev', 'bg-gray-200 text-gray-700': activeTab !== 'webdev' }" class="px-4 py-2">Web & App Development</button>
+                        <button @click="activeTab = 'cybersecurity'" :class="{ 'bg-blue-500 text-white': activeTab === 'cybersecurity', 'bg-gray-200 text-gray-700': activeTab !== 'cybersecurity' }" class="px-4 py-2">Cybersecurity & IT</button>
+                        <button @click="activeTab = 'branding'" :class="{ 'bg-blue-500 text-white': activeTab === 'branding', 'bg-gray-200 text-gray-700': activeTab !== 'branding' }" class="px-4 py-2">Branding & Content</button>
+                        <button @click="activeTab = 'business'" :class="{ 'bg-blue-500 text-white': activeTab === 'business', 'bg-gray-200 text-gray-700': activeTab !== 'business' }" class="px-4 py-2">Business & Tax</button>
+                        <button @click="activeTab = 'ntsa'" :class="{ 'bg-blue-500 text-white': activeTab === 'ntsa', 'bg-gray-200 text-gray-700': activeTab !== 'ntsa' }" class="px-4 py-2">NTSA & Documents</button>
+                        <button @click="activeTab = 'working'" :class="{ 'bg-blue-500 text-white': activeTab === 'working', 'bg-gray-200 text-gray-700': activeTab !== 'working' }" class="px-4 py-2">Working with Us</button>
+                        <button @click="activeTab = 'contact'" :class="{ 'bg-blue-500 text-white': activeTab === 'contact', 'bg-gray-200 text-gray-700': activeTab !== 'contact' }" class="px-4 py-2 rounded-r-lg">Contact</button>
+                    </div>
+                    <div x-show="activeTab === 'general'" class="space-y-4">
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">What is DizohTech?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                DizohTech is a technology-driven solutions company specializing in web and app development, cybersecurity, IT consulting, branding, and other digital services. We help businesses of all sizes achieve growth, efficiency, and security through innovative solutions tailored to their needs.
+                            </div>
+                        </div>
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">What services does DizohTech offer?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                We offer a wide range of services, including:
+                                <ul class="list-disc list-inside ml-4 mt-2">
+                                    <li>Web and App Development</li>
+                                    <li>Cybersecurity and IT Consulting</li>
+                                    <li>Branding and Logo Design</li>
+                                    <li>Content Creation and Design</li>
+                                    <li>Business and Tax Consulting</li>
+                                    <li>NTSA Services (e.g., driving license renewal, motor vehicle inspection booking)</li>
+                                    <li>Bulk Printing and CV Drafting</li>
+                                </ul>
+                                Visit our <a href="#" class="text-blue-600 hover:underline">Services Page</a> for a full list of offerings.
+                            </div>
+                        </div>
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">Who can benefit from DizohTech's services?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                Our services cater to individuals, startups, SMEs, and large enterprises across industries. Whether you're looking to establish your brand, enhance your digital presence, or streamline your IT infrastructure, DizohTech can help.
+                            </div>
+                        </div>
+                    </div>
+                    <div x-show="activeTab === 'webdev'" class="space-y-4">
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">How long does it take to develop a website or app?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                Project timelines vary based on the complexity and scope. A basic website can take 2–4 weeks, while more complex applications may require several months. We provide a detailed timeline after the initial consultation.
+                            </div>
+                        </div>
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">Do you offer maintenance and support after development?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                Yes! We offer post-launch maintenance, updates, and support to ensure your website or app remains secure, up-to-date, and optimized.
+                            </div>
+                        </div>
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">Can you help redesign or improve an existing website?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                Absolutely. We can modernize your current website, improve its performance, or add new features to better meet your goals.
+                            </div>
+                        </div>
+                    </div>
+                    <div x-show="activeTab === 'cybersecurity'" class="space-y-4">
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">How can DizohTech help secure my business?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                We offer a range of cybersecurity solutions, including vulnerability assessments, penetration testing, data encryption, and employee training on best practices.
+                            </div>
+                        </div>
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">What IT consulting services do you provide?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                Our IT consulting covers infrastructure setup, cloud integration, IT audits, and recommendations for technology improvements tailored to your business needs.
+                            </div>
+                        </div>
+                    </div>
+                    <div x-show="activeTab === 'branding'" class="space-y-4">
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">Can DizohTech help create a brand identity for my business?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                Yes! We design logos, create branding guidelines, and produce visually appealing and consistent content to establish and grow your brand's identity.
+                            </div>
+                        </div>
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">Do you offer content writing services for websites and social media?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                Yes, our team creates engaging, SEO-friendly content for websites, blogs, and social media to help you connect with your target audience.
+                            </div>
+                        </div>
+                    </div>
+                    <div x-show="activeTab === 'business'" class="space-y-4">
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">Can you help with KRA tax return filing?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                Yes, we provide assistance with individual and corporate KRA tax return filing, ensuring compliance with local tax regulations.
+                            </div>
+                        </div>
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">What business registration services do you offer?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                We can assist you with registering your business, acquiring relevant licenses, and drafting business plans tailored to your goals.
+                            </div>
+                        </div>
+                    </div>
+                    <div x-show="activeTab === 'ntsa'" class="space-y-4">
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">What NTSA services do you provide?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                We help with driving license renewals, motor vehicle inspection bookings, logbook transfers, and other NTSA-related tasks.
+                            </div>
+                        </div>
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">Can you draft CVs and cover letters?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                Yes, we provide professional CV drafting and editing services, as well as custom cover letters to help you stand out in your job search.
+                            </div>
+                        </div>
+                    </div>
+                    <div x-show="activeTab === 'working'" class="space-y-4">
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">How do I get started with DizohTech?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                Simply contact us through our website, email, or WhatsApp, and one of our experts will guide you through the process. You can also fill out a service request form to provide details about your project.
+                            </div>
+                        </div>
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">Do you offer customized solutions?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                Yes, all our solutions are tailored to meet the unique needs of our clients. From personalized websites to bespoke consulting services, we ensure your requirements are at the core of every project.
+                            </div>
+                        </div>
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">What payment methods do you accept?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                We accept payments via bank transfer, mobile money, and other digital payment methods. Specific details will be provided during the invoicing process.
+                            </div>
+                        </div>
+                    </div>
+                    <div x-show="activeTab === 'contact'" class="space-y-4">
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">How can I contact DizohTech?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                You can reach us through the following channels:
+                                <ul class="list-disc list-inside ml-4 mt-2">
+                                    <li><strong>WhatsApp:</strong> 0724948294</li>
+                                    <li><strong>Email:</strong> dizohtechcyber@gmail.com</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div x-data="{ open: false }" class="border-b border-gray-200 pb-4">
+                            <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                                <span class="text-lg font-medium">What are your business hours?</span>
+                                <i data-lucide="chevron-down" :class="{'rotate-180': open}" class="w-5 h-5 transition-transform duration-200"></i>
+                            </button>
+                            <div x-show="open" x-transition class="mt-2 text-gray-600">
+                                We are available Monday to Friday, 8:00 AM – 6:00 PM, and Saturday, 9:00 AM – 3:00 PM. For urgent matters, please use our WhatsApp contact.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <h3 class="text-xl font-semibold mb-2">Still Have Questions?</h3>
+                        <p class="text-gray-600">If your question isn't listed here, feel free to reach out to us directly. We're always happy to assist!</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 DizohTech. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const sections = [
+            { id: 'information-we-collect', title: '1. Information We Collect', icon: 'database' },
+            { id: 'how-we-use-your-information', title: '2. How We Use Your Information', icon: 'settings' },
+            { id: 'how-we-share-your-information', title: '3. How We Share Your Information', icon: 'share-2' },
+            { id: 'security-of-your-information', title: '4. Security of Your Information', icon: 'shield' },
+            { id: 'your-rights-and-choices', title: '5. Your Rights and Choices', icon: 'user' },
+            { id: 'third-party-links', title: '6. Third-Party Links', icon: 'external-link' },
+            { id: 'childrens-privacy', title: "7. Children's Privacy", icon: 'users' },
+            { id: 'changes-to-this-privacy-policy', title: '8. Changes to This Privacy Policy', icon: 'refresh-cw' },
+            { id: 'contact-us', title: '9. Contact Us', icon: 'mail' },
+        ];
+
+        const tableOfContents = document.getElementById('tableOfContents');
+        const policyContent = document.getElementById('policyContent');
+
+        sections.forEach(section => {
+            // Add to table of contents
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <a href="#${section.id}" class="flex items-center space-x-2 text-blue-600 hover:text-blue-800 transition-colors duration-200">
+                    <i data-lucide="${section.icon}" class="w-4 h-4"></i>
+                    <span>${section.title}</span>
+                </a>
+            `;
+            tableOfContents.appendChild(li);
+
+            // Create section content
+            const sectionDiv = document.createElement('div');
+            sectionDiv.id = section.id;
+            sectionDiv.className = 'bg-white rounded-lg shadow-md p-6';
+            sectionDiv.innerHTML = `
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <i data-lucide="${section.icon}" class="w-6 h-6 mr-2"></i>
+                    ${section.title}
+                </h2>
+                <div class="text-gray-700 space-y-4" id="content-${section.id}"></div>
+            `;
+            policyContent.appendChild(sectionDiv);
+
+            // Populate content based on section id
+            const content = document.getElementById(`content-${section.id}`);
+            switch(section.id) {
+                case 'information-we-collect':
+                    content.innerHTML = `
+                        <h3 class="text-lg font-semibold">a. Personal Information</h3>
+                        <p>When you engage with us, we may ask for personal details such as:</p>
+                        <ul class="list-disc list-inside ml-4">
+                            <li><strong>Contact Information:</strong> Name, email address, phone number, and physical address.</li>
+                            <li><strong>Identification Information:</strong> For services requiring verification, such as business registration, we may ask for identification documents or other details as required by law.</li>
+                            <li><strong>Financial Information:</strong> Bank account details, transaction history, or payment information, strictly for transactional purposes.</li>
+                        </ul>
+                        <h3 class="text-lg font-semibold mt-4">b. Non-Personal Information</h3>
+                        <ul class="list-disc list-inside ml-4">
+                            <li><strong>Usage Data:</strong> Information about your interactions with our website, such as pages viewed, time spent on each page, and referring URLs.</li>
+                            <li><strong>Technical Data:</strong> IP address, browser type, device information, operating system, and general location data based on IP.</li>
+                        </ul>
+                        <h3 class="text-lg font-semibold mt-4">c. Cookies and Tracking Technologies</h3>
+                        <p>We may use cookies, web beacons, pixels, and similar tracking technologies to collect data about your browsing actions. You can control cookie settings in your browser, but please note that disabling cookies may affect your ability to use certain features on our website.</p>
+                    `;
+                    break;
+                case 'how-we-use-your-information':
+                    content.innerHTML = `
+                        <ul class="list-disc list-inside ml-4">
+                            <li><strong>Provide and Improve Services:</strong> Process transactions, respond to inquiries, and personalize your experience.</li>
+                            <li><strong>Communicate with You:</strong> Send you updates, newsletters, promotions, and other marketing communications, if you've opted in.</li>
+                            <li><strong>Ensure Security and Compliance:</strong> Monitor usage to protect our users, prevent fraud, and comply with legal obligations.</li>
+                            <li><strong>Enhance User Experience:</strong> Analyze usage to improve our website, services, and user support.</li>
+                        </ul>
+                    `;
+                    break;
+                case 'how-we-share-your-information':
+                    content.innerHTML = `
+                        <p>We do not sell your personal information. However, we may share information in the following circumstances:</p>
+                        <ul class="list-disc list-inside ml-4">
+                            <li><strong>With Service Providers:</strong> We may share data with trusted third-party service providers who assist us in our business operations, such as payment processors, data hosting, and analytics services. These providers are contractually obligated to protect your information.</li>
+                            <li><strong>For Legal Reasons:</strong> We may disclose information if required to comply with a legal obligation, such as a subpoena, or to protect the rights, property, or safety of DizohTech, our clients, or the public.</li>
+                            <li><strong>In Case of Business Transfers:</strong> If we undergo a merger, acquisition, or asset sale, your information may be transferred as part of the transaction.</li>
+                        </ul>
+                    `;
+                    break;
+                case 'security-of-your-information':
+                    content.innerHTML = `
+                        <p>We implement appropriate technical and organizational measures to secure your personal information. However, no online service is entirely secure, and while we strive to protect your data, we cannot guarantee absolute security.</p>
+                        <p class="mt-4">If you suspect a breach of your information, please contact us immediately at <span id="contactEmail">privacy@dizohtech.com</span>.</p>
+                    `;
+                    break;
+                case 'your-rights-and-choices':
+                    content.innerHTML = `
+                        <p>Depending on your location, you may have the following rights concerning your personal data:</p>
+                        <ul class="list-disc list-inside ml-4">
+                            <li><strong>Access and Correction:</strong> You have the right to access and correct the personal data we hold about you. To request access or correction, please contact us at <span id="contactEmail2">privacy@dizohtech.com</span>.</li>
+                            <li><strong>Data Portability:</strong> You may request a copy of your data in a structured, commonly used, and machine-readable format.</li>
+                            <li><strong>Deletion:</strong> You have the right to request deletion of your personal information, subject to any legal obligations we may have to retain it.</li>
+                            <li><strong>Opt-Out of Marketing Communications:</strong> You can opt out of receiving marketing communications from us by following the unsubscribe instructions included in each email or contacting us directly.</li>
+                            <li><strong>Withdraw Consent:</strong> Where we rely on your consent to process data, you may withdraw it at any time without affecting the lawfulness of processing based on consent before its withdrawal.</li>
+                        </ul>
+                    `;
+                    break;
+                case 'third-party-links':
+                    content.innerHTML = `
+                        <p>Our website may contain links to third-party sites. We are not responsible for the privacy practices or content of those sites. We encourage you to review their privacy policies before providing them with any personal information.</p>
+                    `;
+                    break;
+                case 'childrens-privacy':
+                    content.innerHTML = `
+                        <p>Our services are not directed to individuals under the age of 18, and we do not knowingly collect personal information from minors. If we learn that we have inadvertently collected personal data from a child, we will take steps to delete such information promptly.</p>
+                    `;
+                    break;
+                case 'changes-to-this-privacy-policy':
+                    content.innerHTML = `
+                        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Effective Date" at the top of this policy. We encourage you to review this policy periodically for any updates or changes.</p>
+                    `;
+                    break;
+                case 'contact-us':
+                    content.innerHTML = `
+                        <p>If you have any questions or concerns about this Privacy Policy or our practices, please contact us at:</p>
+                        <ul class="list-disc list-inside ml-4 mt-2">
+                            <li><strong>Email:</strong> <span id="contactEmail3">privacy@dizohtech.com</span></li>
+                            <li><strong>Phone:</strong> <span id="contactPhone">+1 (555) 123-4567</span></li>
+                            <li><strong>Address:</strong> <span id="contactAddress">123 Tech Street, San Francisco, CA 94105, USA</span></li>
+                        </ul>
+                    `;
+                    break;
+            }
+        });
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

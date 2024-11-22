@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.5);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+            max-width: 600px;
+            border-radius: 8px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        body {
+            transition: background 0.5s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white bg-opacity-30 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">
+                Dizotech
+            </div>
+            <div class="flex-grow flex justify-center">
+                <div class="hidden md:flex space-x-8">
+                    <a href="services.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Services</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition duration-300">About Us</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition duration-300">Contact</a>
+                </div>
+            </div>
+            <div class="hidden md:block">
+                <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg transition duration-300 hover:bg-blue-500">Book a Consultation</a>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-toggle" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white bg-opacity-30 backdrop-blur-md shadow-md">
+            <div class="flex flex-col px-4 py-2 space-y-2">
+                <a href="#services" class="text-gray-700 hover:text-blue-600 transition duration-300">Services</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 transition duration-300">About Us</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 transition duration-300">Contact</a>
+                <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg transition duration-300 hover:bg-blue-500">Book a Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-gradient-to-r from-green-400 to-blue-500 py-10 mt-16">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl font-bold text-white">Our Services</h1>
+            <p class="text-lg text-white mt-4">Discover our comprehensive range of services tailored to meet your business needs.</p>
+            <a href="https://wa.me/254724948294" target="_blank" class="text-white mt-4 inline-block bg-green-600 px ```html
+-6 py-3 rounded-lg hover:bg-green-500 transition duration-300">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Services Body -->
+    <main class="py-20">
+        <div class="container mx-auto text-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Cybersecurity and IT Consulting -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <i class="fas fa-shield-alt text-5xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">Cybersecurity and IT Consulting</h3>
+                    <p class="mb-4 text-gray-600">Protect your business with our top-notch cybersecurity and IT consulting services.</p>
+                    <a href="#" class="text-green-600 font-semibold hover:underline learn-more" data-service="Cybersecurity and IT Consulting">Learn More</a>
+                </div>
+
+                <!-- Content Creation and Design Services -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <i class="fas fa-pencil-alt text-5xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">Content Creation and Design Services</h3>
+                    <p class="mb-4 text-gray-600">Engage your audience with our creative content and design solutions.</p>
+                    <a href="#" class="text-green-600 font-semibold hover:underline learn-more" data-service="Content Creation and Design Services">Learn More</a>
+                </div>
+
+                <!-- Web and App Development -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <i class="fas fa-code text-5xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">Web and App Development</h3>
+                    <p class="mb-4 text-gray-600">Build robust and scalable web and mobile applications with our expert development team.</p>
+                    <a href="#" class="text-green-600 font-semibold hover:underline learn-more" data-service="Web and App Development">Learn More</a>
+                </div>
+
+                <!-- Travel Passport Application -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <i class="fas fa-passport text-5xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">Travel Passport Application</h3>
+                    <p class="mb-4 text-gray-600">Streamline your travel plans with our passport application assistance.</p>
+                    <a href="#" class="text-green-600 font-semibold hover:underline learn-more" data-service="Travel Passport Application">Learn More</a>
+                </div>
+
+                <!-- Business Registration -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <i class="fas fa-briefcase text-5xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">Business Registration</h3>
+                    <p class="mb-4 text-gray-600">Launch your business legally and efficiently with our comprehensive registration services.</p>
+                    <a href="#" class="text-green-600 font-semibold hover:underline learn-more" data-service="Business Registration">Learn More</a>
+                </div>
+
+                <!-- Business Plan Drafting -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <i class="fas fa-file-alt text-5xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">Business Plan Drafting</h3>
+                    <p class="mb-4 text-gray-600">Turn your business vision into a structured plan with our professional business plan drafting service.</p>
+                    <a href="#" class="text-green-600 font-semibold hover:underline learn-more" data-service="Business Plan Drafting">Learn More</a>
+                </div>
+
+                <!-- NTSA Services -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow -xl">
+                    <i class="fas fa-car text-5xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">NTSA Services</h3>
+                    <p class="mb-4 text-gray-600">Simplify your interactions with the National Transport and Safety Authority (NTSA).</p>
+                    <a href="#" class="text-green-600 font-semibold hover:underline learn-more" data-service="NTSA Services">Learn More</a>
+                </div>
+
+                <!-- KRA Return Filing and Consultation -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <i class="fas fa-file-invoice text-5xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">KRA Return Filing and Consultation</h3>
+                    <p class="mb-4 text-gray-600">Stay tax compliant with our expert KRA filing and consultation service.</p>
+                    <a href="#" class="text-green-600 font-semibold hover:underline learn-more" data-service="KRA Return Filing and Consultation">Learn More</a>
+                </div>
+
+                <!-- Bulk Printing, CV Drafting, and Document Preparation -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <i class="fas fa-print text-5xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">Bulk Printing, CV Drafting, and Document Preparation</h3>
+                    <p class="mb-4 text-gray-600">Our bulk printing and document preparation services are perfect for high-quality printing needs.</p>
+                    <a href="#" class="text-green-600 font-semibold hover:underline learn-more" data-service="Bulk Printing, CV Drafting, and Document Preparation">Learn More</a>
+                </div>
+
+                <!-- Additional Online Services -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <i class="fas fa-globe text-5xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">Additional Online Services</h3>
+                    <p class="mb-4 text-gray-600">We offer various online services to meet digital and administrative needs.</p>
+                    <a href="#" class="text-green-600 font-semibold hover:underline learn-more" data-service="Additional Online Services">Learn More</a>
+                </div>
+
+                <!-- New Service Cards -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center">
+                        <i class="fas fa-passport text-3xl text-blue-600"></i>
+                        <h2 class="text-xl font-bold ml-4">DV Lottery Application Assistance</h2>
+                    </div>
+                    <p class="mt-2">Increase your chances of a successful Diversity Visa (DV) Lottery application with our expert guidance.</p>
+                    <button class="learn-more mt-4 text-blue-600" data-service="DV Lottery Application Assistance">Learn More</button>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center">
+                        <i class="fas fa-graduation-cap text-3xl text-blue-600"></i>
+                        <h2 class="text-xl font-bold ml-4">HELB Loan Application Assistance</h2>
+                    </div>
+                    <p class="mt-2">Secure your Higher Education Loans Board (HELB) loan smoothly with our application assistance service.</p>
+                    <button class="learn-more mt-4 text-blue-600" data-service="HELB Loan Application Assistance">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Dizotech. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-2">
+                <a href="#" class="hover:text-blue-400">Privacy Policy</a>
+                <a href="#" class="hover:text-blue-400">Terms of Service</a>
+                <a href="#" class="hover:text-blue-400">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+ ```html
+    <!-- Modal Structure -->
+    <div id="infoModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg overflow-hidden w-11/12 md:w-1/2">
+            <div class="p-4 border-b flex justify-between items-center">
+                <h3 id="modalTitle" class="text-xl font-bold"></h3>
+                <button class="text-gray-500 hover:text-gray-700" onclick="closeModal()">×</button>
+            </div>
+            <div class="p-4">
+                <p id="modalContent" class="mb-4"></p>
+
+                <!-- Multi-Step Form Inside Modal -->
+                <div id="multiStepForm">
+                    <!-- Step 1 -->
+                    <div id="step1" class="form-step">
+                        <h4 class="text-lg font-semibold">Step 1: Contact Information</h4>
+                        <input type="text" placeholder="Full Name" class="w-full p-2 border mb-4">
+                        <input type="email" placeholder="Email Address" class="w-full p-2 border mb-4">
+                        <input type="tel" placeholder="Phone Number" class="w-full p-2 border mb-4">
+                        <button type="button" onclick="nextStep(2)" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Next</button>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div id="step2" class="form-step hidden">
+                        <h4 class="text-lg font-semibold">Step 2: Service Details</h4>
+                        <textarea placeholder="Describe your requirements" class="w-full p-2 border mb-4"></textarea>
+                        <button type="button" onclick="nextStep(3)" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Next</button>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div id="step3" class="form-step hidden">
+                        <h4 class="text-lg font-semibold">Step 3: Confirmation</h4>
+                        <p>Review your details and submit your request.</p>
+                        <button type="button" onclick="submitForm()" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 border-t text-right flex justify-between items-center">
+                <a href="https://wa.me/254724948294" target="_blank" class="text-green-600 font-semibold hover:underline">
+                    <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
+                </a>
+                <button onclick="closeModal()" class="px-4 py-2 bg-gray-200 text-gray-600 rounded hover:bg-gray-300">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Helper function to safely get elements
+    function getElement(id) {
+        const element = document.getElementById(id);
+        if (!element) {
+            console.error(`Element with ID '${id}' not found.`);
+            return null;
+        }
+        return element;
+    }
+
+    // Dynamic Background (optional toggle)
+    document.addEventListener('mousemove', (event) => {
+        const x = event.clientX / window.innerWidth;
+        const y = event.clientY / window.innerHeight;
+        document.body.style.background = `radial-gradient(circle at ${x * 100}% ${y * 100}%, #ff7e5f, #feb47b)`;
+    });
+
+    // Show service details modal with form
+    function showModal(title, content) {
+        const modal = getElement("infoModal");
+        if (!modal) return;
+
+        getElement("modalTitle").innerText = title;
+        getElement("modalContent").innerText = content;
+        modal.classList.remove("hidden");
+        resetForm();
+    }
+
+    // Hide modal and reset form
+    function closeModal() {
+        const modal = getElement("infoModal");
+        if (modal) modal.classList.add("hidden");
+    }
+
+    // Close modal on outside click
+    window.onclick = function(event) {
+        const modal = getElement("infoModal");
+        if (event.target === modal) {
+            closeModal();
+        }
+    }
+
+    // Multi-step form handling with validation
+    function nextStep(step) {
+        if (!validateForm(step - 1)) {
+            alert("Please fill in all required fields before proceeding.");
+            return;
+        }
+
+        document.querySelectorAll('.form-step').forEach((el) => el.classList.add('hidden'));
+        getElement('step' + step).classList.remove('hidden');
+
+        if (step === 3) {
+            displayConfirmation();
+        }
+    }
+
+    // Reset form steps and input fields
+    function resetForm() {
+        nextStep(1);
+        document.querySelectorAll('.form-step input, .form-step textarea').forEach(input => input.value = '');
+        getElement('confirmationDetails').innerHTML = '';
+    }
+
+    // Display confirmation details on Step 3
+    function displayConfirmation() {
+        const name = document.querySelector('#step1 input[name="name"]').value;
+        const email = document.querySelector('#step1 input[name="email"]').value;
+        const phone = document.querySelector('#step1 input[name="phone"]').value;
+        const requirements = document.querySelector('#step2 textarea[name="requirements"]').value;
+
+        const confirmationHtml = `
+            <h4 class="text-lg font-semibold">Confirmation</h4>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Phone:</strong> ${phone}</p>
+            <p><strong>Requirements:</strong> ${requirements}</p>
+            <button onclick="editDetails(1)" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 mt-4">Edit Details</button>
+        `;
+        getElement('confirmationDetails').innerHTML = confirmationHtml;
+    }
+
+    // Form validation for each step
+    function validateForm(step) {
+        let isValid = true;
+        const inputs = document.querySelectorAll(`#step${step} input, #step${step} textarea`);
+        inputs.forEach(input => {
+            if (!input.value) {
+                isValid = false;
+                input.classList.add('border-red-500');
+                input.placeholder = "This field is required"; // Highlight empty fields
+            } else {
+                input.classList.remove('border-red-500');
+            }
+        });
+        return isValid;
+    }
+
+    function displayConfirmation() {
+        const name = document.querySelector('#step1 input[name="name"]').value;
+        const email = document.querySelector('#step1 input[name="email"]').value;
+        const phone = document.querySelector('#step1 input[name="phone"]').value;
+        const requirements = document.querySelector('#step2 textarea[name="requirements"]').value;
+
+        const confirmationHtml = `
+            <h4 class="text-lg font-semibold">Confirmation</h4>
+            <p><strong>Name:</strong> ${name} <button onclick="editDetails('step1')" class="text-blue-500">Edit</button></p>
+            <p><strong>Email:</strong> ${email} <button onclick="editDetails('step1')" class="text-blue-500">Edit</button></p>
+            <p><strong>Phone:</strong> ${phone} <button onclick="editDetails('step1')" class="text-blue-500">Edit</button></p>
+            <p><strong>Requirements:</strong> ${requirements} <button onclick="editDetails('step2')" class="text-blue-500">Edit</button></p>
+        `;
+
+        document.getElementById('confirmationDetails').innerHTML = confirmationHtml;
+    }
+
+    function editDetails(step) {
+        nextStep(step);
+    }
+
+    function submitForm() {
+        if (!validateForm(3)) {
+            alert("Please fill in all required fields.");
+            return;
+        }
+
+        alert("Thank you ! Your service request has been submitted.");
+        closeModal();
+        resetForm(); // Reset the form after submission
+    }
+
+    // Event listener for "Learn More" links using data attributes
+    document.querySelectorAll('.learn-more').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const serviceName = this.getAttribute('data-service');
+            const serviceDescription = getServiceDescription(serviceName);
+            showModal(serviceName, serviceDescription);
+        });
+    });
+
+    // Function to retrieve service descriptions dynamically
+    function getServiceDescription(serviceName) {
+        const services = {
+            "Cybersecurity and IT Consulting": "Protect your business with our top-notch cybersecurity and IT consulting services. We assess your vulnerabilities, implement robust security measures, and provide ongoing support to ensure your business remains secure against evolving threats.",
+            "Content Creation and Design Services": "Engage your audience with our creative content and design solutions. We offer tailored content strategies, graphic design, and branding services that resonate with your target market and enhance your brand visibility.",
+            "Travel Passport Application": "Streamline your travel plans with our passport application assistance. We guide you through the documentation and application process, helping you avoid common delays and ensuring your application is handled professionally.",
+            "Business Registration": "Launch your business legally and efficiently with our comprehensive registration services. We assist with all types of business setups, including sole proprietorships, partnerships, and limited companies.",
+            "Business Plan Drafting": "Turn your business vision into a structured plan with our professional business plan drafting service. This service is ideal for startups, expanding businesses, and entrepreneurs seeking investment.",
+            "Web and App Development": "Build robust and scalable web and mobile applications with our expert development team. We utilize the latest technologies to create user-friendly interfaces and ensure optimal performance, catering to your specific business needs.",
+            "NTSA Services": "Simplify your interactions with the National Transport and Safety Authority (NTSA) with our comprehensive NTSA services. From renewing your driver’s license to booking vehicle inspections, we make the process hassle-free.",
+            "KRA Return Filing and Consultation": "Stay tax compliant with our expert KRA filing and consultation service. We handle tax return preparation and filing, ensuring accuracy and adherence to tax laws to avoid penalties.",
+            "Bulk Printing, CV Drafting, and Document Preparation": "Our bulk printing and document preparation services are perfect for businesses, organizations, and individuals with high-quality printing needs. We also provide professional CV drafting to help you stand out in job applications.",
+            "Additional Online Services": "We also offer various online services to meet digital and administrative needs, including online payments, e-commerce setup, and social media management.",
+            "DV Lottery Application Assistance": "Increase your chances of a successful Diversity Visa (DV) Lottery application with our expert guidance. We provide assistance with the application process and ensure all requirements are met.",
+            "HELB Loan Application Assistance": "Secure your Higher Education Loans Board (HELB) loan smoothly with our application assistance service. We help you navigate the application process and ensure timely submission."
+        };
+        return services[serviceName] || "Service description not available.";
+    }
+</script>
+
+    
+</body>
+</html>
